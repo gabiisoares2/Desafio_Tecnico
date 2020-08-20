@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+@using (Html.BeginForm())
+{
+    <div class="divInicio">
+        <div class="text-center">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="col-md-4 mb-3">
+                        <select name="_selectLista" id="selectLista" class="form-control">
+                            <option value="0" selected>Selecione uma Dívida</option>
+                            @foreach (var item in ViewBag.ListaDividas)
+                            {
+                                <option value="@item.Id">@item.Descricao</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="qtdeParcelas">Quantidade de Parcelas:</label>
+                        <input type="number" class="form-control" id="qtdeParcelas" required="required">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="porcentagem">Porcentagem da Paschoalotto:</label>
+                        <input type="number" class="form-control" id="porcentagem" required="required">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button type="button" class="btn btn-danger" onclick="btnCalcular_Onclick()">Calcular</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ModalCalculo" tabindex="-1" role="dialog" aria-labelledby="modalCalculoLabel" aria-hidden="true">
+    </div>
+}

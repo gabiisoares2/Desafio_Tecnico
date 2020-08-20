@@ -1,0 +1,30 @@
+﻿@model DesafioTecnico.DAO.Model.CalculoDividas
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalCalculoLabel">Resultado do Cálculo - @Model.Descricao</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Data Vencimento: @Model.DataVencimento.ToString("dd/MM/yyyy")</li>
+                <li>Dias Atraso: @Model.DiasAtraso</li>
+                <li>Valor Original: R$ @Model.ValorOriginal.ToString("C")</li>
+                <li>Valor Juros: R$ @Model.ValorJuros.ToString("C")</li>
+                <li>Valor Final: R$ @Model.ValorFinal.ToString("C")</li>
+                <li>
+                    Valor Final de Cada Parcela:
+                    <ul>
+                        @foreach (var item in Model.ListaParcelas)
+                        {
+                            <li>@item.NumeroParcela - R$ @item.ValorParcela - Data Vencimento: @item.DataVencimentoParcela.ToString("dd/MM/yyyy")</li>
+                        }
+                    </ul>
+                </li>
+                <li>Telefone de orientação para ligar e negociar com um colaborador: @Model.Contato</li>
+            </ul>
+        </div>
+    </div>
+</div>

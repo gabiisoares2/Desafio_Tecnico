@@ -1,0 +1,20 @@
+Olá, esta é uma documentação para te auxiliar no uso do desafio técnico.
+
+Para fazer as consultas foi utilizado o banco de dados SQL SERVER, disponibilizei um script para você poder criar o banco e utilizá-lo.
+Foi criado 3 usuários de login:
+
+Login	Senha
+
+user1	1234
+user2	1234
+user3	1234
+
+
+
+Para acessar o banco na aplicação, por favor trocar a string de conexão para o seu servidor, usuário e senha.
+Para a criação desta aplicação foi utilizado as seguintes tecnologias:
+•	Asp.net core 3.1;
+•	Dapper;
+•	SQL SERVER
+•	JavaScript e Jquery;
+•	Bootstrap.

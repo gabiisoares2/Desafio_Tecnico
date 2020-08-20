@@ -1,0 +1,40 @@
+﻿@model DesafioTecnico.DAO.Model.Login
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+    <div class="container">
+        <div class="form-row divPosicao">
+            <div class="col-md-12 text-center">
+                <h2>Faça Login para entrar no sistema</h2>
+            </div>
+            <br />
+            <div class="form-group col-md-6">
+                <label for="Email">Email</label>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", id = "Email", placeholder = "Email:", required = "required", maxlength = "20" })
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Senha">Senha</label>
+                @Html.TextBoxFor(model => model.Senha, new { type = "password", @class = "form-control", id = "Senha", placeholder = "Senha:", maxlength = "10", required = "required" })
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-danger" type="submit">Acessar</button>
+            </div>
+        </div>      
+    </div>
+    }
+</body>
+</html>
