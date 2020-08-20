@@ -1,6 +1,6 @@
 Olá, esta é uma documentação para te auxiliar no uso do desafio técnico.
 
-Para fazer as consultas foi utilizado o banco de dados SQL SERVER, disponibilizei um script para você poder criar o banco e utilizá-lo.
+Para fazer as consultas foi utilizado o banco de dados SQL SERVER, disponibilizei um script que é o arquivo "script.DBsql" para você poder criar o banco e utilizá-lo.
 Foi criado 3 usuários de login:
 
 Login	Senha
